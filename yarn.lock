@@ -1773,11 +1773,6 @@ react-lifecycles-compat@^3.0.2:
   resolved "https://registry.yarnpkg.com/react-lifecycles-compat/-/react-lifecycles-compat-3.0.4.tgz#4f1a273afdfc8f3488a8c516bfda78f872352362"
   integrity sha512-fBASbA6LnOU9dOU2eW7aQ8xmYBSXUIWr+UmF9b1efZBazGNO+rcXT/icdKnYm2pTwcRylVUYwW7H1PHfLekVzA==
 
-react-parallax-scroll@^0.1.1:
-  version "0.1.1"
-  resolved "https://registry.yarnpkg.com/react-parallax-scroll/-/react-parallax-scroll-0.1.1.tgz#d9898f8fec56408f51eec09dae3681161122c287"
-  integrity sha512-OpHGoO+p41F7YCtSMw4B4uAsEx38hZslx68GuTqaAQ7p2Jk1DEE6VszhRVXwoUt5/S5gCVj6ll3OzRNZ9RCJSQ==
-
 react-scroll-parallax@^3.2.0:
   version "3.2.0"
   resolved "https://registry.yarnpkg.com/react-scroll-parallax/-/react-scroll-parallax-3.2.0.tgz#fad93571a274af796de3db344e358d1db67088b7"

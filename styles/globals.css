@@ -19,8 +19,14 @@ body {
   font-family: var(--font-sans);
   font-size: var(--fz-xl);
   line-height: 1.3;
+  scroll-behavior: smooth;
   background-color: #0a192f;
 background-image: url("/img/arabesque.png");
+}
+
+.myBackground{
+  background-color: #0a192f;
+  background-image: url("/img/arabesque.png");
 }
 
 a {
@@ -163,3 +169,37 @@ box-shadow: -2px -5px 43px -12px rgba(0,0,0,1);
   @apply shadow-lg border-8 border-blue-900 z-10 rounded-lg 
 }
 
+.pbg{
+  background: var(--navy);
+  position: relative;
+  border-radius: var(--border-radius);
+}
+.cbg{
+  mix-blend-mode: multiply;
+  filter: grayscale(100%) contrast(1);
+  transition: var(--transition);
+}
+
+
+.pbg:hover{
+  background:var(--lightest-navy);
+}
+
+
+.mypbg{
+  background: var(--lightest-navy);
+  position: relative;
+  border-radius: var(--border-radius);
+}
+.mycbg:hover{
+  filter:none;
+  mix-blend-mode: unset;
+}
+.mycbg{
+  mix-blend-mode: multiply;
+  filter: grayscale(100%) contrast(1);
+  transition: var(--transition);
+}
+.mypbg:hover{
+  background:transparent;
+}

@@ -523,7 +523,7 @@ const Slider = () => {
 					{
 						sliderData.map((e, i) => {
 							return (
-								<div className={`box${i + 1} box`}>
+								<div key={i} className={`box${i + 1} box`}>
 									<div className="bg"></div>
 									<div className="details">
 										<h1 className="h1">Hello, I'm the {e.title}</h1>

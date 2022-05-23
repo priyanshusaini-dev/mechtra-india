@@ -120,7 +120,7 @@
     border: solid 3px var(--green);
     border-left: 0;
     border-bottom: 0;
-    top: calc(50% - 9px);
+    top: calc(50% - 7px);
     border-radius: 2px;
     transform: translateX(-42px) rotate(45deg);
     transition: all 0.3s 0.2s ease-in-out;

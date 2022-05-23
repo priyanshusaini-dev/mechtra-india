@@ -1,0 +1,18 @@
+import React from 'react'
+
+const AboutPage = () => {
+  return (
+    <div className='myBackground mt-[-4rem] md:p-24 p-8 md:pt-6'>
+
+         <p style={{boxSizing: 'border-box', margin: '0px 0px 10px', fontSize: 14, minHeight: 80, fontFamily: 'josefin_sansregular',}}><span style={{fontSize: '14pt', fontFamily: 'arial, helvetica, sans-serif'}}>Making its mark in the International Grid of Automobile Components manufacturing, MECTRA INDIA steers ahead as a leading Tier 1 supplier of Proprietary Automotive Solutions to Original Equipment Manufacturers (OEMs). Incepted way back in 1958 with a meagre start-up capital and now notching up a group turnover beyond US$ 1 Billion, speaks volumes of the conglomerate that it is today.</span></p>
+  <p style={{boxSizing: 'border-box', margin: '0px 0px 10px', fontSize: 14, minHeight: 80, fontFamily: 'josefin_sansregular',}}><span style={{fontSize: '14pt', fontFamily: 'arial, helvetica, sans-serif'}}>For more than six decades, MECTRA INDIA has made significant contributions to the automotive industry supply chain with innovative products, designed and engineered for efficiency with an emphasis on enhanced comfort levels and fine-tuned response.</span></p>
+  <p style={{boxSizing: 'border-box', margin: '0px 0px 10px', fontSize: 14, minHeight: 80, fontFamily: 'josefin_sansregular',}}><span style={{fontSize: '14pt', fontFamily: 'arial, helvetica, sans-serif'}}>MECTRA INDIA has 71 manufacturing plants in India, Indonesia, Vietnam, Spain, Morocco, Mexico Colombia, Germany design centers in Taiwan, Japan &amp; Spain sales offices in North America, Europe and ASEAN Countries.</span></p>
+  <p style={{boxSizing: 'border-box', margin: '0px 0px 10px', fontSize: 14, minHeight: 80, fontFamily: 'josefin_sansregular',}}><span style={{fontSize: '14pt', fontFamily: 'arial, helvetica, sans-serif'}}>With the human edge of a highly motivated workforce of over 23000 team members, the Group is headquartered in Manesar, Haryana, India. We have more than 15 engineering, research and development centers globally.</span></p>
+  <p style={{boxSizing: 'border-box', margin: '0px 0px 10px', fontSize: 14, minHeight: 80, fontFamily: 'josefin_sansregular',}}><span style={{fontSize: '14pt', fontFamily: 'arial, helvetica, sans-serif'}}>The MECTRA INDIA strategic alignment ensures the maintenance of leadership in providing the ideal product support for their customers. Drawing on the benefits of this long-term customer support relation, MECTRA INDIA forges ahead as a Tier-1 supplier. We manufacture Alternate Fuel Systems; Air Filtration Systems; Canisters; Brake Hoses &amp; Fuel Hoses; Combined Braking System (CBS); Noise Suppressor Cap; PDC Parts; Alloy Wheels; Seat Belts; Cameras; EA Pad; Steering Wheel with Airbags; Air Brakes; Fuel Caps; Lighting; Air Ducts &amp; Washer Bottle; Spoiler; Body Sealing; 2W Switches &amp; Handle Bar Assembly , 4W Switches &amp; HVAC; Cigar Lighters; Wheel Covers; Shifters; Infotainment Systems(CD Tuners, Display Audio &amp; Audio Video Navigations); Speakers; RPAS &amp; ADAS; Sensors; Actuators; Controllers; Relay; End to End Telematics &amp; Connected Car Solutions; Horns; Seating Systems.</span></p>
+  <p style={{boxSizing: 'border-box', margin: '0px 0px 10px', fontSize: 14, minHeight: 80, fontFamily: 'josefin_sansregular',}}><span style={{fontSize: '14pt', fontFamily: 'arial, helvetica, sans-serif'}}>Technology and innovation are two key pillars of MECTRA INDIA philosophy. Our underlying vision is to create a culture that fosters great ideas that can be the basis for planning ingenious products, successfully manufactured to deliver value to our customers.</span></p>
+
+    </div>
+  )
+}
+
+export default AboutPage

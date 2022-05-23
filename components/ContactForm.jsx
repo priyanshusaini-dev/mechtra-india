@@ -285,8 +285,8 @@ textarea:valid+label {
   }
 }
       `}</style>
-
-      <section id="contact" className=''>
+      {/* <h2 className="text-xl my-4">Hey! We are looking forward to start a project with you!</h2> */}
+      <section id="contact" className='relative mt-[-4rem]'>
         <div className="contact-box">
           <div className="contact-links">
             <h2>CONTACT</h2>

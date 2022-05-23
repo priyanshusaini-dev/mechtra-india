@@ -1,6 +1,7 @@
 import React from 'react'
 import Footer from './Footer'
 import Navbar from './Navbar'
+import Blob from './Blob'
 import Head from 'next/head'
 
 
@@ -20,17 +21,18 @@ const Layout = ({ children }) => {
     },
     {
       title: "Investors",
-      link: "/investors"
+      link: "/investors" 
     },
     {
-      title: "Blog",
-      link: "/blog"
+      title: "About Us",
+      link: "/about"
     },
     {
       title: "Contact us",
       link: "/contact"
     },
   ];
+
 
   return (
     <>
@@ -46,6 +48,7 @@ const Layout = ({ children }) => {
       </Head>
       <a className="skip-to-content" href="#content">Skip to Content</a>
       <Navbar navItem={navItem} />
+      <Blob/>
       <div id="content" >
         <main className=' relative mt-[45px]'>
           {children}        

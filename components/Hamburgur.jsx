@@ -55,7 +55,7 @@ const Hamburgur = ({checkInput}) => {
         `}
       </style>
       <label htmlFor="check" >
-        <input type="checkbox" id="check" onClick={()=>checkInput()} />
+        <input type="checkbox" id="check"  onClick={()=>checkInput()} />
         <span />
         <span />
         <span />
