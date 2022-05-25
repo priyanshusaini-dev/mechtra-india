@@ -318,7 +318,7 @@ textarea:valid+label {
               </form>
                 <Recaptcha
                   ref={recaptcha}
-                  sitekey="6LccHwcgAAAAABnO5BByDyKsrGSU99Rv-AnLqdvw"
+                  sitekey="6LcDxgggAAAAAFIJ7mCNDsQtycc5ym7s3iQlJd5c"
                   onResolved={() => setHuman(true)} />
             </div>
           </div>
