@@ -7,7 +7,7 @@ const Card = (props) => {
     let formatedUrl = "products/" + props.item.title.split(" ").join("-").toLowerCase();
     return (
         <div className="p-4 md:w-1/3">
-            <div className="h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden">
+            <div className="h-full border-2 border-gray-200 shadow-2xl bg-[#0a192f] border-opacity-60 rounded-lg overflow-hidden">
                 <img className="lg:h-48 md:h-36 w-full object-cover object-center" src={props.item.img} alt="Image" />
                 <Link href={formatedUrl}><a>
                     <div className="p-6">

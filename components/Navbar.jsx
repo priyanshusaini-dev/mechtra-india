@@ -1,6 +1,8 @@
+
+import Image from "next/image";
+const imageLoader = require("../loader.js");
 import React, { useRef,useEffect } from "react";
 import Link from "next/link";
-import Image from "next/image";
 import { useRouter } from "next/router";
 import styles from "../styles/Navbar.module.css";
 import Hamburgur from "./Hamburgur";
@@ -16,7 +18,7 @@ const Navbar = ({ navItem }) => {
   }
   useEffect(() => {
     window.addEventListener("click", (e) => {
-    if (panel.current.classList.contains(styles.panelOpen)&&!menu.current.contains(e.target)) {
+    if (panel.current!=null && panel.current.classList.contains(styles.panelOpen)&&!menu.current.contains(e.target)) {
       let myele = document.getElementById("check");
       myele.checked = !myele.checked;
       checkInput()
@@ -31,7 +33,7 @@ const Navbar = ({ navItem }) => {
         <div className={styles.logo}>
           <Link href="/" scroll={false}>
             <a>
-              <Image src="/logo.png" alt="logo" width={50} height={50} />
+              <Image  loader={imageLoader} src="/logo.png" alt="logo" width={50} height={50} />
             </a>
           </Link>
         </div>

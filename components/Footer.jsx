@@ -1,5 +1,6 @@
 import React from 'react'
-import Image from 'next/image'
+import Image from "next/image";
+const imageLoader = require("../loader.js");
 import Link from "next/link";
 
 
@@ -50,7 +51,7 @@ const Footer = ({ navItem }) => {
  const privacyItem=[
    {
     title: "Privacy Policy",
-    link:"/privcy",
+    link:"/privacy",
   },
   {
     title: "Terms and Conditions",
@@ -60,55 +61,52 @@ const Footer = ({ navItem }) => {
   return (
     <>
       <div className="relative inset-x-0 bottom-0 py-5 footer">
-        <div className='flex flex-wrap justify-center w-full mt-4 text-center'>
+        <div className='flex flex-wrap justify-center gap-5 w-full mt-4 text-center'>
           <div className="hover:text-[#4267B2] hover:text-[#E1306C] hover:text-[#1DA1F2] hover:text-[#DB4437] hover:text-[#006AFF]  hover:text-[#FF0000]"></div>
           {icon.map((e, i) => {
           let iconColor = `hover:text-[${e.color}]`
-            return <a href={e.url} key={i} target="_blank"> <i className={`fa-brands ${e.icon} mx-2 my-3 w-[2.4rem] fa-lg ${iconColor}`}></i></a>
+            return <a href={e.url} key={i} target="_blank" rel="noreferrer"> <i className={`fa-brands ${e.icon} mx-2 my-3 w-[2.4rem] fa-2xl ${iconColor}`}></i></a>
           })}
         </div>
         <section className="w-full p-4 ">
-          {/* <div className="w-full flex justify-center">
-            <Image src="/img/logo.png" width={90} height={90} alt="logo" />
-          </div> */}
 
           <hr className="m-auto w-[50%] opacity-20 mb-12" />
 
           <div>
             <div className="flex justify-around flex-wrap md:text-left text-center order-first">
               <div className="lg:w-1/4 md:w-1/2 w-full px-4">
-                <h2 className="title-font font-medium text-white tracking-widest text-sm mb-3">Visit</h2>
+                <h2 className="title-font font-medium text-2xl text-white tracking-widest text-sm mb-3">Visit</h2>
                 <nav className="list-none mb-10">
                   {navItem.map((e, i) => {
                     return <li key={i}>
-                      <Link href={e.link}><a className="text-gray-400 hover:text-white">{e.title}</a></Link>
+                      <Link href={e.link}><a className="text-gray-400 text-lg hover:text-white">{e.title}</a></Link>
                     </li>
                   })}
                 </nav>
               </div>
               <div className="lg:w-1/4 md:w-1/2 w-full px-4">
-                <h2 className="title-font font-medium text-white tracking-widest text-sm mb-3">CUSTOMER SERVICE</h2>
+                <h2 className="title-font font-medium text-[1.2rem] text-white tracking-widest text-sm mb-3">CUSTOMER SERVICE</h2>
                 <nav className="list-none mb-10">
                   {termItem.map((e, i) => {
                     return <li key={i}>
-                      <Link href={e.link}><a className="text-gray-400 hover:text-white">{e.title}</a></Link>
+                      <Link href={e.link}><a className="text-gray-400 text-lg hover:text-white">{e.title}</a></Link>
                     </li>
                   })}
                 </nav>
               </div>
               <div className="lg:w-1/4 md:w-1/2 w-full px-4">
-                <h2 className="title-font font-medium text-white tracking-widest text-sm mb-3">POLICY</h2>
+                <h2 className="title-font font-medium text-2xl text-white tracking-widest text-sm mb-3">POLICY</h2>
                 <nav className="list-none mb-10">
                   {privacyItem.map((e, i) => {
                     return <li key={i}>
-                      <Link href={e.link}><a className="text-gray-400 hover:text-white">{e.title}</a></Link>
+                      <Link href={e.link}><a className="text-gray-400 text-lg hover:text-white">{e.title}</a></Link>
                     </li>
                   })}
                 </nav>
               </div>
               <div className="lg:w-1/4 md:w-1/2 w-full px-4">
                   <div className="w-full flex justify-center">
-                <Image src="/img/logo.png" width={180} height={180} />
+                <Image loader={imageLoader} src="logo.png" width={180} height={180} />
                   </div>
                 <h1 className="text-center mt-5 text-2xl">Mectra India</h1>
               </div>
@@ -116,15 +114,15 @@ const Footer = ({ navItem }) => {
           </div>
 
 
-          <p className="text-center lg:mx-48 text-sm  mt-7">1120 Lorem ipsum dolor sit amet, KC 179050, Chandigarh.</p>
-          <p className="text-center  text-sm mt-2 font-mono">+01 2345 6789 12  |  +01 2345 6789 12</p>
+          <p className="text-center lg:mx-48 text-md mt-7">1120 Lorem ipsum dolor sit amet, KC 179050, Chandigarh.</p>
+          <p className="text-center  text-md mt-2 font-mono">+01 2345 6789 12  |  +01 2345 6789 12</p>
 
 
           <hr className="opacity-20" />
         </section>
 
-        <footer className='flex justify-center text-sm'>
-          <p>Copyright © 2019 <span className="relative top-1"><Image src="/img/logo.png" width={25} height={25} alt="logo" /></span> All Rights Reserved.</p>
+        <footer className='flex justify-center text-md'>
+          <p>Copyright © 2019 <span className="relative top-1"><Image loader={imageLoader} src="logo.png" width={25} height={25} alt="logo" /></span> All Rights Reserved.</p>
         </footer>
 
       </div>

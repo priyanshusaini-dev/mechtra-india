@@ -1,6 +1,8 @@
 import React, { useEffect, useRef } from 'react'
 import { gsap } from 'gsap'
-import Image from "next/image"
+import Image from "next/image";
+const imageLoader = require("../loader.js");
+
 const Slider = () => {
 
 	useEffect(() => {
@@ -170,27 +172,27 @@ const Slider = () => {
 
 	let sliderData = [
 		{
-			image: "/img/man1.jpg",
+			image: "man1.jpeg",
 			title: "Random Firangi",
 			desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer lacinia dui lectus. Donec scelerisque ipsum	diam, ac mattis orci pellentesque eget."
 		},
 		{
-			image: "/img/man2.jpg",
+			image: "man2.jpg",
 			title: "Ipsum Kumar",
 			desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer lacinia dui lectus. Donec scelerisque ipsum diam, ac mattis orci pellentesque eget."
 		},
 		{
-			image: "/img/man3.jpg",
+			image: "man3.jpg",
 			title: "Dolar Sit",
 			desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer lacinia dui lectus. Donec scelerisque ipsum diam, ac mattis orci pellentesque eget."
 		},
 		{
-			image: "/img/man4.jfif",
+			image: "man4.jfif",
 			title: "Lorem Saini",
 			desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer lacinia dui lectus. Donec scelerisque ipsum diam, ac mattis orci pellentesque eget."
 		},
 		{
-			image: "/img/man5.jfif",
+			image: "man5.jfif",
 			title: "RDJ - The manger",
 			desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer lacinia dui lectus. Donec scelerisque ipsum diam, ac mattis orci pellentesque eget."
 		},
@@ -518,7 +520,7 @@ const Slider = () => {
  
             `}</style>
 
-			<div className="mycontainer">
+			<div className="mycontainer font-Garamond">
 				<div className="slider">
 					{
 						sliderData.map((e, i) => {
@@ -526,14 +528,14 @@ const Slider = () => {
 								<div key={i} className={`box${i + 1} box`}>
 									<div className="bg"></div>
 									<div className="details">
-										<h1 className="h1">Hello, I'm the {e.title}</h1>
-										<p className="p">
+										<h1 className="h1">Hello, I	&apos;m the {e.title}</h1>
+										<p className="p font-sans">
 											{e.desc}
 										</p>
 										<button className="button">Check Now</button>
 									</div>
 
-									<div className="illustration"><div className="inner"><span className='rounded-lg p-5 overflow-hidden'><Image objectFit="cover" src={e.image} height="630" width="500" layout="fill" className="rounded-[3rem] z-[100000] p-5"></Image></span></div></div>
+									<div className="illustration"><div className="inner"><span className='rounded-lg p-5 overflow-hidden'><Image  objectFit="cover" loader={imageLoader} src={e.image} height="630" width="500" layout="fill" className="rounded-[3rem] z-[100000] p-5"></Image></span></div></div>
 								</div>
 							)
 						})

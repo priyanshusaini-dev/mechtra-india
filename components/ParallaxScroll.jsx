@@ -1,53 +1,65 @@
-import React,{useRef} from 'react'
-import Image from 'next/image'
-// import ContactForm from './ContactForm'
-import { Parallax } from "react-scroll-parallax";
+import React, { useRef } from 'react'
+import { Parallax, ParallaxBanner } from "react-scroll-parallax";
 
-const ParallaxScroll = ({img,component,title,bgUrl,fontSize}) => {
 
-  const bgRef = useRef();
+const ParallaxScroll = ({  component, title, bgUrl,fgUrl, fontSize }) => {
+
+  const background= {
+    translateY: [0, 50],
+    opacity: [1, 0.3],
+    scale: [1.05, 1, 'easeOutCubic'],
+    shouldAlwaysCompleteAnimation: true,
+    children: (
+      <div className="absolute inset-0 flex items-center justify-center">
+        <div className=' w-full'>
+        <img src={bgUrl} alt="title" className='w-full' />
+        </div>
+      </div>
+    ),
+  };
+
+  const headline= {
+    translateY: [0, 30],
+    scale: [1, 1.05, 'easeOutCubic'],
+    shouldAlwaysCompleteAnimation: true,
+    expanded: false,
+    children: (
+      <div className="absolute inset-0 flex items-center justify-center">
+        <h1 className="text-6xl md:text-8xl text-white font-thin">
+          {title}
+        </h1>
+      </div>
+    ),
+  };
+
+  const foreground= {
+    image:fgUrl,
+    translateY: [0, 15],
+    scale: [1, 1.1, 'easeOutCubic'],
+    shouldAlwaysCompleteAnimation: true,
+  };
+
+  const gradientOverlay= {
+    opacity: [0, 0.9],
+    shouldAlwaysCompleteAnimation: true,
+    expanded: false,
+    children: (
+      <div className="absolute inset-0 bg-gradient-to-t from-gray-900 to-blue-900" />
+    ),
+  };
 
   return (
     <>
-      <style jsx>{`
-      .font{
-        font-size: ${fontSize}rem;
-      }
-      @media only screen and (max-width: 600px) {
-        .font {
-          font-size: ${fontSize-2.5}rem;
-        }
-      }
-      
-      .tle:hover .pbg{
-        background:var(--lightest-navy);
-
-      }
-   `}</style>
-
-      <div className='flex flex-wrap justify-between '>
-
-        <div className="w-[100%] relative top-[-3rem]  shadow-inner  tle">
-          <Parallax speed={-20}>
-            <div ref={bgRef} className='pbg'>
-              <div className="w-full h-[20rem] cbg">
-                <Image src={bgUrl} alt='contact-image' layout="fill" width={600} height={480} />
-              </div>
-            </div>
-          </Parallax>
-
-          <div className=" w-full absolute top-[6rem] md:top-[10rem] text-center">
-            <h1 className=' w-full py-10 text-white font md:text-[{fontSize}rem]'><u>{title}</u></h1>
-            {/* <h2 className="text-xl my-4">Hey! We are looking forward to start a project with you!</h2>
-            <p className="text-center px-3 text-sm">We are a full service degital agenc in the hart of Delhi city Lorem ipsum dolor sit amet consectetur, adipisicing elit. Accusantium beatae eaque distinctio, eos sint exercitationem omnis reiciendis animi dolore cumque praesentium odit adipisci molestias magnam ipsum? Quas officia aliquam repellendus!</p> */}
-          </div>
-        </div>
-      </div>
-      <Parallax speed={20}>
-        {component}
-      </Parallax>
+    <ParallaxBanner
+      layers={[background, headline, foreground, gradientOverlay]}
+      className="aspect-[2/1] h-[70vh] md:h-[100vh] bg-gray-900"
+    />
+    <Parallax speed={20}>
+       {component}
+    </Parallax>
     </>
-  )
+  );
+
 }
 
 export default ParallaxScroll

@@ -43,7 +43,7 @@ const Layout = ({ children }) => {
         <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.1.1/css/all.css"></link>
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.8.0/dist/leaflet.css"
    integrity="sha512-hoalWLoI8r4UszCkZ5kL8vayOGVae1oxXe/2A4AO6J9+580uKHDO3JdHb7NzwwzK5xr/Fs0W40kiNHxM9vyTtQ=="
-   crossorigin=""/>
+   crossOrigin=""/>
         <script src="https://www.google.com/recaptcha/api.js" async defer></script>
       </Head>
       <a className="skip-to-content" href="#content">Skip to Content</a>

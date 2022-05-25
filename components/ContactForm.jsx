@@ -12,6 +12,7 @@ const ContactForm = () => {
   const { register, handleSubmit, watch, formState: { errors }, reset } = useForm();
   const recaptcha = useRef(null);
   const secretKey = process.env.SECRET_KEY
+  const SITE_KEY = process.env.SITE_KEY
   const [human, setHuman] = useState(false)
 
   const SERVICE_ID = process.env.SERVICE_ID
@@ -23,8 +24,6 @@ const ContactForm = () => {
     let token = await recaptcha.current.execute()
 
     let { name, email, subject, message } = data
-
-    console.log(name)
 
     if (human) {
       reset({ name: "", email: '', subject: "", message: '' })
@@ -40,10 +39,10 @@ const ContactForm = () => {
       });
 
       send(
-        "service_apjl87v",
-        "template_zue3ty3",
+        SERVICE_ID,
+        TEMPLATE_ID,
         data,
-        "jmP0lpolAcoD51OmB"
+        USER_ID
       )
         .then(response => console.log('SUCCESS!', response.status, response.text))
         .catch(err => console.log('FAILED...', err));
@@ -80,7 +79,7 @@ const ContactForm = () => {
     <>
 
       <style jsx>{`
-    @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 @import url('https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap');
 
@@ -287,62 +286,64 @@ textarea:valid+label {
       `}</style>
       {/* <h2 className="text-xl my-4">Hey! We are looking forward to start a project with you!</h2> */}
       <section id="contact" className='relative mt-[-4rem]'>
-        <div className="contact-box">
-          <div className="contact-links">
-            <h2>CONTACT</h2>
-            <div className="links mt-5 text-white">
-              <div className="link ">
-                <a href={links[0]}><i className="fa-brands hover:text-[#4267B2] fa-xl mx-2 fa-facebook-f"></i></a>
-              </div>
-              <div className="link">
-                <a href={links[1]}><i className="fa-brands hover:text-[#E1306C] fa-xl mx-2 fa-instagram"></i></a>
-              </div>
-              <div className="link">
-                <a href={links[2]}><i className="fa-brands hover:text-[#1DA1F2] fa-xl mx-2 fa-twitter"></i></a>
-              </div>
-              <div className="link">
-                <a href={links[3]}><i className="fa-brands hover:text-[#DB4437] fa-xl mx-2 fa-google-plus-g"></i></a>
-              </div>
-              <div className="link">
-                <a href={links[4]}><i className="fa-brands hover:text-[#006AFF] fa-xl mx-2 fa-linkedin-in"></i></a>
+        <div className="w-full bg-[#0c203d83]  my-4 flex justify-center">
+          <div className="contact-box">
+            <div className="contact-links">
+              <h2>CONTACT</h2>
+              <div className="links mt-5 text-white">
+                <div className="link ">
+                  <a href={links[0]}><i className="fa-brands hover:text-[#4267B2] fa-xl mx-2 fa-facebook-f"></i></a>
+                </div>
+                <div className="link">
+                  <a href={links[1]}><i className="fa-brands hover:text-[#E1306C] fa-xl mx-2 fa-instagram"></i></a>
+                </div>
+                <div className="link">
+                  <a href={links[2]}><i className="fa-brands hover:text-[#1DA1F2] fa-xl mx-2 fa-twitter"></i></a>
+                </div>
+                <div className="link">
+                  <a href={links[3]}><i className="fa-brands hover:text-[#DB4437] fa-xl mx-2 fa-google-plus-g"></i></a>
+                </div>
+                <div className="link">
+                  <a href={links[4]}><i className="fa-brands hover:text-[#006AFF] fa-xl mx-2 fa-linkedin-in"></i></a>
+                </div>
               </div>
             </div>
-          </div>
 
-          <div className="contact-form-wrapper">
-            <form onSubmit={handleSubmit(onSubmit)}>
-              <div className="form-item">
-                <input type="text" name="name" {...register("name")} required />
-                {errors.name && <span>This field is required</span>}
-                <label>Name*:</label>
-              </div>
-              <div className="form-item">
-                <input type="email" name="email" {...register("email")} required />
-                {errors.email && <span>This field is required</span>}
-                <label>Email*:</label>
-              </div>
-              <div className="form-item">
-                <input type="text" name="subject" {...register("subject")} required />
-                {errors.subject && <span>This field is required</span>}
-                <label>Subject*:</label>
-              </div>
-              <div className="form-item">
-                <textarea className='' name="message" {...register("message", { required: true })} required defaultValue={""} />
-                {errors.message && <span>This field is required</span>}
-                <label>Message*:</label>
-              </div>
+            <div className="contact-form-wrapper">
+              <form onSubmit={handleSubmit(onSubmit)}>
+                <div className="form-item">
+                  <input type="text" name="name" {...register("name")} required />
+                  {errors.name && <span>This field is required</span>}
+                  <label>Name*:</label>
+                </div>
+                <div className="form-item">
+                  <input type="email" name="email" {...register("email")} required />
+                  {errors.email && <span>This field is required</span>}
+                  <label>Email*:</label>
+                </div>
+                <div className="form-item">
+                  <input type="text" name="subject" {...register("subject")} required />
+                  {errors.subject && <span>This field is required</span>}
+                  <label>Subject*:</label>
+                </div>
+                <div className="form-item">
+                  <textarea className='' name="message" {...register("message", { required: true })} required defaultValue={""} />
+                  {errors.message && <span>This field is required</span>}
+                  <label>Message*:</label>
+                </div>
 
-              <Recaptcha
-                ref={recaptcha}
-                sitekey='6LcDxgggAAAAAFIJ7mCNDsQtycc5ym7s3iQlJd5c'
-                onResolved={() => setHuman(true)} />
-              <button type='submit' className="submit-btn">Send</button>
-            </form>
+                <Recaptcha
+                  ref={recaptcha}
+                  sitekey={SITE_KEY}
+                  onResolved={() => setHuman(true)} />
+                <button type='submit' className="submit-btn">Send</button>
+              </form>
+            </div>
           </div>
         </div>
         <ToastContainer />
-        <YourMap/>
-        
+        <YourMap />
+
       </section>
 
     </>
