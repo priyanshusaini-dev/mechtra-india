@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "export": "next build && next export && next-image-export-optimizer",
+    "export": "next build && next export",
     "start": "next start",
     "lint": "next lint"
   },
@@ -13,14 +13,13 @@
     "emailjs-com": "^3.2.0",
     "gsap": "^3.10.4",
     "leaflet": "^1.8.0",
-    "next": "12.1.4",
+    "next": "^12.1.6",
     "react": "17.0.2",
     "react-animated-numbers": "^0.12.2",
     "react-dom": "17.0.2",
     "react-google-invisible-recaptcha": "^0.2.12",
     "react-hook-form": "^7.31.1",
     "react-leaflet": "^4.0.0",
-    "react-reveal": "^1.2.2",
     "react-scroll-parallax": "^3.2.0",
     "react-toastify": "^9.0.1"
   },

@@ -8,59 +8,41 @@ import YourMap from "./YourMap.jsx"
 
 
 
-const ContactForm = () => {
+const ContactForm = ({mytoast}) => {
   const { register, handleSubmit, watch, formState: { errors }, reset } = useForm();
   const recaptcha = useRef(null);
-  const secretKey = process.env.SECRET_KEY
-  const SITE_KEY = process.env.SITE_KEY
+  // const secretKey = process.env.REACT_APP_SECRET_KEY
+  // const SITE_KEY = process.env.REACT_APP_SITE_KEY
   const [human, setHuman] = useState(false)
 
-  const SERVICE_ID = process.env.SERVICE_ID
-  const TEMPLATE_ID = process.env.TEMPLATE_ID
-  const USER_ID = process.env.USER_ID
+  // const SERVICE_ID = process.env.REACT_APP_SERVICE_ID
+  // const TEMPLATE_ID = process.env.REACT_APP_TEMPLATE_ID
+  // const USER_ID = process.env.REACT_APP_USER_ID
+
 
   const onSubmit = async data => {
-    console.log(recaptcha)
     let token = await recaptcha.current.execute()
-
+    
     let { name, email, subject, message } = data
-
+    
     if (human) {
       reset({ name: "", email: '', subject: "", message: '' })
-      toast.success('Message is successfully sent', {
-        position: "bottom-center",
-        theme: "dark",
-        autoClose: 3000,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: true,
-        progress: undefined,
-      });
-
+      
+      mytoast("success")
       send(
-        SERVICE_ID,
-        TEMPLATE_ID,
+        "service_apjl87v",
+        "template_zue3ty3",
         data,
-        USER_ID
-      )
+        "jmP0lpolAcoD51OmB"
+        )
         .then(response => console.log('SUCCESS!', response.status, response.text))
         .catch(err => console.log('FAILED...', err));
-
+        
     }
     else {
-      toast.error('Sorry, Message is not sent. Human is not detected', {
-        position: "bottom-center",
-        theme: "dark",
-        autoClose: 3000,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: true,
-        progress: undefined,
-      });
+      mytoast("error")
     }
-
+    
   };
 
 
@@ -77,7 +59,7 @@ const ContactForm = () => {
 
   return (
     <>
-
+    <ToastContainer />
       <style jsx>{`
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
@@ -332,16 +314,15 @@ textarea:valid+label {
                   <label>Message*:</label>
                 </div>
 
-                <Recaptcha
-                  ref={recaptcha}
-                  sitekey={SITE_KEY}
-                  onResolved={() => setHuman(true)} />
                 <button type='submit' className="submit-btn">Send</button>
               </form>
+                <Recaptcha
+                  ref={recaptcha}
+                  sitekey="6LcDxgggAAAAAFIJ7mCNDsQtycc5ym7s3iQlJd5c"
+                  onResolved={() => setHuman(true)} />
             </div>
           </div>
         </div>
-        <ToastContainer />
         <YourMap />
 
       </section>

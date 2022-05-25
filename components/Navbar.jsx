@@ -60,7 +60,7 @@ const Navbar = ({ navItem }) => {
                   return (
                     <li key={i}>
                       <Link href={e.link}>
-                        <a className={styles.link}><span className={router.pathname == e.link ? styles.activeTab : ""}>{e.title}</span> </a>
+                        <a onClick={()=>{let myele = document.getElementById("check"); myele.checked = !myele.checked; checkInput()}} className={styles.link}><span className={router.pathname == e.link ? styles.activeTab : ""}>{e.title}</span> </a>
                       </Link>
                     </li>
                   )
