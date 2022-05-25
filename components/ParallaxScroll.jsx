@@ -25,7 +25,7 @@ const ParallaxScroll = ({  component, title, bgUrl,fgUrl, fontSize }) => {
     expanded: false,
     children: (
       <div className="absolute inset-0 flex items-center justify-center">
-        <h1 className="text-6xl md:text-8xl text-white font-thin">
+        <h1 className="text-6xl md:text-8xl text-white font-bold">
           {title}
         </h1>
       </div>

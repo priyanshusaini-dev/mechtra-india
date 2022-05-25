@@ -24,7 +24,7 @@ for (const i of productItem) {
       <section className="text-gray-600 body-font overflow-hidden">
         <div className="container px-5 py-24 mx-auto">
           <div className="lg:w-4/5 mx-auto flex flex-wrap">
-            <Image loader={imageLoader} src={myItem.img} width={400} height={550}/>
+            <Image loader={imageLoader} src={myItem.img.split("/img/")[1]} width={400} height={550}/>
             <div className="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
               <h2 className="text-5xl title-font text-gray-500 tracking-widest">{myItem.title}</h2>
               <hr className='my-2 w-[70%] border-slate-500	'></hr>

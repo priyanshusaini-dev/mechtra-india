@@ -14,16 +14,16 @@ const Layout = ({ children }) => {
       link: "/"
     },
     {
-      title: "CSR",
-      link: "/coprate-social-responsiblty"
-    },
-    {
       title: "Products",
       link: "/products"
     },
     {
       title: "Investors",
       link: "/investors" 
+    },
+    {
+      title: "CSR",
+      link: "/coprate-social-responsiblty"
     },
     {
       title: "About Us",

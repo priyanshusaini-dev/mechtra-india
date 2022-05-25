@@ -104,12 +104,12 @@ const Footer = ({ navItem }) => {
                   })}
                 </nav>
               </div>
-              <div className="lg:w-1/4 md:w-1/2 w-full px-4">
+              <Link href='/'><a className="lg:w-1/4 md:w-1/2 w-full px-4">
                   <div className="w-full flex justify-center">
                 <Image loader={imageLoader} src="logo.png" width={180} height={180} />
                   </div>
                 <h1 className="text-center mt-5 text-2xl">Mectra India</h1>
-              </div>
+              </a></Link>
             </div>
           </div>
 
@@ -122,7 +122,7 @@ const Footer = ({ navItem }) => {
         </section>
 
         <footer className='flex justify-center text-md'>
-          <p>Copyright © 2019 <span className="relative top-1"><Image loader={imageLoader} src="logo.png" width={25} height={25} alt="logo" /></span> All Rights Reserved.</p>
+          <p>Copyright © 2022 <span className="relative top-1"><Image loader={imageLoader} src="logo.png" width={25} height={25} alt="logo" /></span> All Rights Reserved.</p>
         </footer>
 
       </div>

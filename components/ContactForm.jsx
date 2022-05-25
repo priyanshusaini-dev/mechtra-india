@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react'
 import { useForm } from "react-hook-form";
 import Recaptcha from 'react-google-invisible-recaptcha';
-import { ToastContainer, toast } from 'react-toastify';
+import { ToastContainer} from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { send } from 'emailjs-com';
 import YourMap from "./YourMap.jsx"
