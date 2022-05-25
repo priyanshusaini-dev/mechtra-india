@@ -108,7 +108,7 @@ const Footer = ({ navItem }) => {
                   <div className="w-full flex justify-center">
                 <Image loader={imageLoader} src="logo.png" width={180} height={180} />
                   </div>
-                <h1 className="text-center mt-5 text-2xl">Mectra India</h1>
+                <h1 className="text-center mt-5 text-2xl">Mechtra India</h1>
               </a></Link>
             </div>
           </div>

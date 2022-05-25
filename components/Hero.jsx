@@ -94,7 +94,7 @@ const Hero = () => {
                 }
                 `}</style>
                 <div className="herobox absolute bottom-[9rem] border-4 p-6 m-2 border-white backdrop-blur shadow rounded max-w-[35rem] md:ml-16">
-                   <h1 className=" left-10 text-[2rem] md:text-[3rem] z-10 ">Welcome To <br></br><span className='text-[#64ffda] text-[3.2rem] md:text-[5rem] name'>Mectra India</span></h1>
+                   <h1 className=" left-10 text-[2rem] md:text-[3rem] z-10 ">Welcome To <br></br><span className='text-[#64ffda] text-[3.2rem] md:text-[5rem] name'>Mechtra India</span></h1>
                     <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Hic laudantium dignissimos est sunt modi ipsam, obcaecati quas inventore dolorem velit mollitia nam dicta alias aut vel quaerat totam nisi soluta!</p>
                     <Link href="/contact"><a><button className='bg-[#64ffda] m-3 text-black font-bold py-2 px-4 rounded Explore'>Explore</button></a></Link>
                     

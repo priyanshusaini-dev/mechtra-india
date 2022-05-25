@@ -33,7 +33,7 @@ const YourMap = () => {
         </LayerGroup>
         <Marker position={center}>
           <Popup>
-            <span className="text-lg">Mectra India</span>  <br /> Office here
+            <span className="text-lg">Mechtra India</span>  <br /> Office here
           </Popup>
         </Marker>
       </MapContainer>

@@ -9,7 +9,7 @@ function Acard() {
                     <h1 className="text-4xl font-libre">WHO WE ARE</h1>
                 </div>
                 <div className="mb-12 leading-6">
-                    <p>Mectra India is a leading Tier 1 Supplier of Automotive Components to leading Original Equipment Manufacturers (OEMs) globally.</p>
+                    <p>Mechtra India is a leading Tier 1 Supplier of Automotive Components to leading Original Equipment Manufacturers (OEMs) globally.</p>
                 </div>
                 <div className="flex mx-auto text-black bg-[#64ffda] border-0 py-2 px-8 transition ease-in-out duration-200 focus:outline-none hover:bg-[#57cbff] rounded text-lg w-fit">
                     <Link href='/about'  className="">Read More</Link>

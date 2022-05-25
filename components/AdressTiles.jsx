@@ -34,7 +34,7 @@ const AdressTiles = () => {
             <div className='text-[#0092FF]'><i className=" fa-solid fa-envelope  fa-4x"></i></div>
             <h2 className='text-base'>EMAIL</h2>
             <div className='text-xs p-3'>
-              <a>support@mectraindia.com</a>
+              <a>support@Mechtraindia.com</a>
             </div>
           </div>
         </div>
